@@ -1,0 +1,12 @@
+version: "2.3"
+services:
+  model:
+    build: .
+    container_name: sbert
+    hostname: sbert
+    working_dir: /home
+    runtime: nvidia
+    volumes:
+      - ./:/home
+      - /media/tor/hdd/yiw/sbert/:/hdd
+    tty: true
